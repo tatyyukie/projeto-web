@@ -87,6 +87,7 @@ header{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    border: none;
 }
 
 .header-btn-sign-up{
@@ -120,12 +121,11 @@ header{
 }
 
 .main-container .content span{
-    max-width: 7ch;
-    font-size: 10rem;
+    font-size: calc(5rem + 5vw);
     color: #ffffff;
     padding: 0 .5rem;
     font-weight: 800;
-    line-height: 155px;
+    line-height: 100%;
     letter-spacing: -.06em;
 }
 
@@ -190,14 +190,6 @@ header{
     max-width: 78ch;
 }
 
-@media (max-width: 1200px){
-    .main-container .content span{
-        font-size: 8rem;
-        line-height: 128px;
-        letter-spacing: -7.7px;
-    }
-}
-
 @media (max-width: 975px){
     .header-menu, .header-btn{
         display: none;
@@ -222,22 +214,6 @@ header{
         width: 100%;
     }
 
-    .main-container .content span{
-        font-size: 8rem;
-        line-height: 165.6px;
-        letter-spacing: -9.9px;
-    }
-
-    .main-btn{
-        flex-direction: column;
-        gap: 1.25rem;
-        width: 85%;
-    }
-
-    .main-btn .demo{
-        margin-left: 0;
-    }
-
     .main-container .content{
         padding: 3.5rem 1.5rem;
         width: 100%;
@@ -248,14 +224,14 @@ header{
     }
 }
 
-@media (max-width: 620px){
-    .main-container .content span{
-        font-size: 7.1875rem;
-        line-height: 115px;
-        letter-spacing: -6.9px;
+@media (max-width: 600px){
+    .main-btn{
+        flex-direction: column;
+        gap: 1.25rem;
+        width: 100%;
     }
 
-    .main-btn{
-        width: 98%;
+    .main-btn .demo{
+        margin-left: 0;
     }
 }
