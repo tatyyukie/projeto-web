@@ -92,7 +92,7 @@ header{
 .header-btn-sign-up{
     background-color: #ffffff;
     border: 1px solid #ffffff;
-    padding: .3125rem;
+    padding: .435rem .75rem;
     border-radius: .3125rem;
     cursor: pointer;
     font-family: 'Inter', sans-serif;
