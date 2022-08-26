@@ -189,3 +189,73 @@ header{
     padding: 3.5rem 1.5rem;
     max-width: 78ch;
 }
+
+@media (max-width: 1200px){
+    .main-container .content span{
+        font-size: 8rem;
+        line-height: 128px;
+        letter-spacing: -7.7px;
+    }
+}
+
+@media (max-width: 975px){
+    .header-menu, .header-btn{
+        display: none;
+    }
+
+    #header-menu-mobile{
+        display: block;
+    }
+}
+
+@media (max-width: 720px){
+    #header-info{
+        justify-content: center;
+    }
+
+    #header-info #header-close{
+        display: none;
+    }
+
+    .header-container{
+        padding: 1rem 1.5rem;
+        width: 100%;
+    }
+
+    .main-container .content span{
+        font-size: 8rem;
+        line-height: 165.6px;
+        letter-spacing: -9.9px;
+    }
+
+    .main-btn{
+        flex-direction: column;
+        gap: 1.25rem;
+        width: 85%;
+    }
+
+    .main-btn .demo{
+        margin-left: 0;
+    }
+
+    .main-container .content{
+        padding: 3.5rem 1.5rem;
+        width: 100%;
+    }
+
+    .main-container p{
+        padding: 3.5rem 0 0;
+    }
+}
+
+@media (max-width: 620px){
+    .main-container .content span{
+        font-size: 7.1875rem;
+        line-height: 115px;
+        letter-spacing: -6.9px;
+    }
+
+    .main-btn{
+        width: 98%;
+    }
+}
