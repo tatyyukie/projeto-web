@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;800&display=swap');
 
+::-webkit-scrollbar{
+    background: #444444;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #666666;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -18,8 +26,8 @@ body{
     background-color: #111111;
     width: 100%;
     text-align: center;
-    padding: .5rem;
-    border-bottom: rgb(50, 50, 50) 0.5px solid;
+    padding: .5rem 1.875rem;
+    border-bottom: #333333 0.5px solid;
 }
 
 #header-info span{
@@ -30,7 +38,6 @@ body{
 
 #header-info #header-close{
     margin-top: .1875rem;
-    margin-right: 1.5rem;
 }
 
 header{
@@ -45,14 +52,14 @@ header{
     justify-content: space-between;
     align-items: center;
     width: clamp(600px, 90%, 1200px);
-    padding: 1rem;
+    padding: .625rem;
 }
 
 .header-container .header-logo{
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} 
 
 .header-menu, .header-btn{
     display: flex;
@@ -81,26 +88,20 @@ header{
     cursor: pointer;
 }
 
-.header-btn-sign-up a{
+.header-btn-sign-up{
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: .5rem .9375rem;
+    border-radius: .3125rem;
+    cursor: pointer;
     font-family: 'Inter', sans-serif;
     font-size: .875rem;
     font-weight: 500;
     color: #000000;
 }
 
-.header-btn-sign-up a:hover{
-    color: #ffffff;
-}
-
-.header-btn-sign-up{
-    background-color: #ffffff;
-    padding: .5rem .375rem;
-    border-radius: .5rem;
-    cursor: pointer;
-}
-
 .header-btn-sign-up:hover{
     background: #000000;
     border: 1px solid #ffffff;
-    padding: .5625rem .4375rem;
+    color: #ffffff;
 }
