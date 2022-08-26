@@ -51,14 +51,15 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: clamp(600px, 90%, 1200px);
-    padding: .625rem;
+    width: clamp(650px, 100%, 1200px);
+    padding: .625rem 1rem;
 }
 
 .header-container .header-logo{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-right: 3.125rem;
 } 
 
 .header-menu, .header-btn{
@@ -104,4 +105,87 @@ header{
     background: #000000;
     border: 1px solid #ffffff;
     color: #ffffff;
+}
+
+#header-menu-mobile{
+    display: none;
+}
+
+.main-container .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3.5rem 0;
+}
+
+.main-container .content span{
+    max-width: 7ch;
+    font-size: 10rem;
+    color: #ffffff;
+    padding: 0 .5rem;
+    font-weight: 800;
+    line-height: 155px;
+    letter-spacing: -.06em;
+}
+
+.content .gradient{
+    background: linear-gradient(to right, #007cf0, #00e0d9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main-btn{
+    display: flex;
+    margin-top: 3.5rem;
+    padding: .75rem;
+}
+
+.main-btn .start{
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000000;
+    padding: .9375rem 2.75rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.main-btn .start:hover{
+    background: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 1rem 2.8125rem;
+}
+
+.main-btn .demo{
+    background: #000000;
+    box-shadow: 0 0 60px 4px rgb(0, 124, 240, 0.5);
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-left: 1.5rem;
+    padding: .9375rem 3.5rem;
+    border: 1px solid #00e0d9;
+    border-radius: .5rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.main-btn .demo:hover{
+    background: linear-gradient(to right, #00e0d9, #007cf0);
+    border: none;
+    color: #000000;
+    padding: 1rem 3.5625rem;
+}
+
+.main-container p{
+    text-align: center;
+    line-height: 32px;
+    letter-spacing: -0.4px;
+    font-size: 1.25rem;
+    color: #888888;
+    padding: 3.5rem 1.5rem;
+    max-width: 78ch;
 }
