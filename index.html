@@ -38,14 +38,38 @@
 
     <main class="main-container">
         <div class="content">
-            <span class="gradient">Develop.</span>
-            <span>Preview.</span>
-            <span>Ship.</span>
-            <div class="main-btn">
-                <button class="button start">Start Deploying</button>
-                <button class="button demo">Get a Demo</button>
+            <form action="">
+                <h1>Login</h1>
+                <div class="form-item">
+                    <label for="email">E-mail</label>
+                    <input class="form-input" type="text" placeholder="Enter E-mail" name="email" required>
+                </div>
+                <div class="form-item">
+                    <label for="password">Password</label>
+                    <input class="form-input" type="password" placeholder="Enter Password" name="password" required>
+                </div>
+                <div class="main-btn">
+                    <button class="btn-login">Logar</button>
+                </div>
+            </form>
+        </div>
+        <div class="content search hidden">
+            <form action="">
+                <h2>OpenWeather API</h2>
+                <div class="search-content">
+                    <div class="form-item">
+                        <label for="search">Search City</label>
+                        <input class="form-input" type="text" placeholder="Enter City" name="search" required>
+                    </div>
+                    <div>
+                        <button class="btn-search">Search</button>
+                    </div>
+                </div>
+            </form>
+            <div class="weather-content">
+                <span class="city-name">Cornélio Procópio</span>
+                <span class="temperature">32</span>
             </div>
-            <p>Vercel combines the best developer experience with an obsessive focus on end-user performance. Our platform enables frontend teams to do their best work.</p>
         </div>
     </main>
 </body>
