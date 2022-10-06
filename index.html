@@ -8,6 +8,8 @@
     <link rel="shortcut icon" href="https://assets.vercel.com/image/upload/front/favicon/vercel/57x57.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <title>Develop. Preview. Ship. For the best frontend teams – Vercel</title>
+    <script src="index.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" async></script>
 </head>
 <body>
     <header>
@@ -37,7 +39,7 @@
     </header>
 
     <main class="main-container">
-        <div class="content">
+        <div class="content hidden">
             <form action="">
                 <h1>Login</h1>
                 <div class="form-item">
@@ -53,8 +55,8 @@
                 </div>
             </form>
         </div>
-        <div class="content search hidden">
-            <form action="">
+        <div class="content search">
+            <form onsubmit="event.preventDefault();">
                 <h2>OpenWeather API</h2>
                 <div class="search-content">
                     <div class="form-item">
@@ -66,9 +68,9 @@
                     </div>
                 </div>
             </form>
-            <div class="weather-content">
-                <span class="city-name">Cornélio Procópio</span>
-                <span class="temperature">32</span>
+            <div class="weather-content hidden">
+                <span class="city-name"></span>
+                <span class="temperature"></span>
             </div>
         </div>
     </main>
