@@ -218,6 +218,16 @@ form .form-item label{
     padding: 1.5rem 0 3rem;
 }
 
+.weather-item{
+    display: flex;
+    align-items: center;
+}
+
+.weather-icon{
+    width: 5rem;
+    height: 5rem;
+}
+
 .city-name{
     color: #ffffff;
     font-size: 2rem;
@@ -229,6 +239,7 @@ form .form-item label{
     font-size: 3.5rem;
     font-weight: 400;
     position: relative;
+    right: 10px;
 }
 
 .hidden{

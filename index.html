@@ -8,9 +8,8 @@
     <link rel="shortcut icon" href="https://assets.vercel.com/image/upload/front/favicon/vercel/57x57.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <title>Develop. Preview. Ship. For the best frontend teams – Vercel</title>
-    <script src="index.js" async></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" async></script>
-    <script src="https://kit.fontawesome.com/574d4edf5f.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/574d4edf5f.js" crossorigin="anonymous" async></script>
 </head>
 <body>
     <header>
@@ -70,10 +69,14 @@
                 </div>
             </form>
             <div class="weather-content hidden">
-                <span class="city-name"></span> 
-                <span class="temperature"></span>
+                <span class="city-name"></span>
+                <div class="weather-item">
+                    <span><img class="weather-icon" src="" alt=""></span>
+                    <span class="temperature"></span>
+                </div>
             </div>
         </div>
     </main>
+    <script src="index.js"></script>
 </body>
 </html>
