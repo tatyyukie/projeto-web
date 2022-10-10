@@ -198,20 +198,16 @@ form .form-item label{
 }
 
 .btn-search{
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    border-radius: .5rem;
+    border-radius: 50%;
     cursor: pointer;
     background: #000000;
-    border: 1px solid #ffffff;
+    border: 2px solid #ffffff;
     color: #ffffff;
-    padding: .625rem 1.5rem;
-    font-weight: 500;
+    padding: .6875rem .725rem;
 }
 
 .btn-search:hover{
     background-color: #ffffff;
-    border: 1px solid #ffffff;
     color: #000000;
 }
 
