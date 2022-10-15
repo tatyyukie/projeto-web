@@ -173,12 +173,6 @@ form .form-item label{
     margin-top: 2rem;
 }
 
-.search-content{
-    display: flex;
-    align-items: end;
-    gap: 1rem;
-}
-
 .btn-login{
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
@@ -197,13 +191,19 @@ form .form-item label{
     color: #000000;
 }
 
+.search-content{
+    display: flex;
+    align-items: end;
+    gap: 1rem;
+}
+
 .btn-search{
     border-radius: 50%;
     cursor: pointer;
     background: #000000;
     border: 2px solid #ffffff;
     color: #ffffff;
-    padding: .6875rem .725rem;
+    padding: .525rem .675rem .425rem .575rem;
 }
 
 .btn-search:hover{
