@@ -1,3 +1,9 @@
+
+const email_input = document.querySelector('#email-input');
+const password_input = document.querySelector('#password-input');
+const login_button  = document.querySelector('.btn-login');
+
+
 //Elementos da API OpenWeather
 const api_key = '6235a22f6692e222b786ecbb1a900192';
 const city_input = document.querySelector('.search-content .form-input');
