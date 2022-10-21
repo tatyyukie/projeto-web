@@ -26,6 +26,7 @@ login_button.addEventListener('click', () => {
         })
         .catch(error => {
             console.log(error);
+            document.querySelector('.error-msg').classList.remove('hidden');
         });
     }
 });

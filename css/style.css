@@ -166,6 +166,11 @@ form .form-item label{
     color: #ffffff;
 }
 
+.error-msg{
+    color: rgb(255, 49, 49);
+    font-size: .875rem;
+}
+
 .main-btn{
     display: flex;
     align-items: center;
