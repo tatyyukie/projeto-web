@@ -1,6 +1,7 @@
 const email_input = document.querySelector('#email-input');
 const password_input = document.querySelector('#password-input');
 const login_button  = document.querySelector('.btn-login');
+const logout_button = document.querySelector('.logout');
 
 //Elementos da API OpenWeather
 const api_key = '6235a22f6692e222b786ecbb1a900192';
@@ -11,10 +12,20 @@ const temperature_label = document.querySelector('.temperature');
 const weather = document.querySelector('.weather-content');
 const weather_icon = document.querySelector('.weather-icon');
 
+logout_button.addEventListener('click', () => {
+    localStorage.clear();
+    location.reload();
+});
+
+if(localStorage.getItem('logado')){
+    document.querySelector('.content.search').classList.remove('hidden');
+    document.querySelector('.content.login').classList.add('hidden');
+}
+
 login_button.addEventListener('click', () => {
     let email = email_input.value;
     let password = password_input.value;
-  
+
     if(email.length >= 3 && password.length >= 3) {
         axios.post('https://reqres.in/api/login', {
             email: email,
@@ -23,6 +34,7 @@ login_button.addEventListener('click', () => {
         .then(() => {
             document.querySelector('.content.search').classList.remove('hidden');
             document.querySelector('.content.login').classList.add('hidden');
+            localStorage.setItem('logado', true);
         })
         .catch(error => {
             console.log(error);
