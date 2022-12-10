@@ -19,7 +19,7 @@ const storage = multer.diskStorage({
       const novoNomeArquivo = require("crypto").randomBytes(64).toString("hex");
 
       // Indica o novo nome do arquivo:
-      cb(null, ${novoNomeArquivo}.${extensaoArquivo});
+      cb(null, `${novoNomeArquivo}.${extensaoArquivo}`);
     },
   });
 
