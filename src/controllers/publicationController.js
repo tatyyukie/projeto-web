@@ -43,43 +43,30 @@ router.post("/", upload.single("foto"), async (req, res) => {
     }
 });
 
-
-router.get('/listar', async(req, res) => {
-    try {
-        const { title, img } = req.body;
-        const publications = await Publication.find();
-        return res.send({ publications });
-    } catch (err) {
-        return res.status(400).send({ error: 'Erro ao buscar publicação' });
-    }
-});
-
 router.get('/:id', async(req, res) => {
     try {
         const publication = await Publication.findById(req.params.id);
-        return res.send({ publication });
+        return res.render('single', { publication });
     } catch (err) {
         return res.status(400).send({ error: 'Erro ao buscar publicação' });
     }
 });
 
-router.post('/', async (req, res) => {
-    try{
-        const { title, img } = req.body;
-        const publication = await Publication.create({ title, img, user: req.userId });
-
-        return res.send({ publication });
-    } catch (err) {
-        return res.status(400).send({ error: 'Erro ao adicionar nova publicação' });
-    }
-});
-
-router.delete('/:publicationId', async(req, res) => {
-    try {
-        await Publication.findByIdAndRemove(req.params.publicationId);
-        return res.send();
-    } catch (err) {
-        return res.status(400).send({ error: 'Erro ao deletar publicação' });
+router.get('/', async(req, res) => {
+    if(req.query.title){
+        try {
+            const publication = await Publication.findOne({ title: new RegExp('^' + req.query.title) });
+            if(publication){
+                return res.render( 'single', { publication });
+            }
+            res.render("publications", { title: "0 resultados" });
+        } catch (err) {
+            return res.status(400).send({ error: 'Erro ao buscar publicação' });
+        }
+    } else {
+        Publication.find(function(err, docs){
+            res.render("publications", { publications: docs });
+        });
     }
 });
 
