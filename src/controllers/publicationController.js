@@ -25,6 +25,25 @@ const storage = multer.diskStorage({
 
 let upload = multer({ storage });
 
+router.post("/", upload.single("foto"), async (req, res) => {
+    if(req.body.title.length >= 3){
+        try {
+            const { title } = req.body;
+            const { filename, size } = req.file;
+            const publication = await Publication.create({
+                title: title,
+                img: '/public/upload/' + filename,
+            });
+            return res.redirect('/publications');
+        } catch (err) {
+            return res.status(400).send({ error: "Erro ao adicionar nova publicação" + err });
+        }
+    } else {
+        res.render("publications", { title: "O nome do arquivo deve conter pelo menos 3 caracteres!" });
+    }
+});
+
+
 router.get('/listar', async(req, res) => {
     try {
         const { title, img } = req.body;
