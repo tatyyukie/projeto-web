@@ -20,7 +20,7 @@ submit_login.addEventListener('click', () => {
     let password = password_login.value;
 
     if(email.length >= 3 && password.length >= 3) {
-        axios.post('http://localhost:3000/user/login', {
+        axios.post('http://localhost:8080/user/login', {
             email: email,
             password: password
         })
@@ -42,7 +42,7 @@ submit_signup.addEventListener('click', () => {
     let password = password_signup.value;
     
     if(email.length >= 3 && password.length >= 3) {
-        axios.post('http://localhost:3000/user/register', {
+        axios.post('http://localhost:8080/user/register', {
             email: email,
             password: password
         })
